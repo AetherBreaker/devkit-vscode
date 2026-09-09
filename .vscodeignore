@@ -6,3 +6,19 @@ tsconfig.json
 vitest.config.ts
 *.vsix
 scripts/**
+
+# devkit-managed repository files, not part of the extension
+.github/**
+.claude/**
+.vscode/**
+.cache/**
+.venv/**
+.gitattributes
+.gitignore
+.mcp.json
+.python-version
+.env
+.env.*
+AGENTS.md
+pyproject.toml
+uv.lock

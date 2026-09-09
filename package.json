@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "publisher": "aeth",
   "private": true,
-  "repository": { "type": "git", "url": "https://github.com/AetherBreaker/aeth-devkit" },
+  "repository": { "type": "git", "url": "https://github.com/AetherBreaker/devkit-vscode" },
   "engines": { "vscode": "^1.90.0" },
   "categories": ["Other"],
   "main": "./dist/extension.js",

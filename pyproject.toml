@@ -1,0 +1,27 @@
+[project]
+  name            = "devkit-vscode"
+  # The extension is versioned by its build number (tag vN, vsix N.0.0); nothing in this
+  # repository is released by `devkit release`, so this number never moves.
+  version         = "0.0.0"
+  description     = "The aeth-devkit VS Code extension: native diff consent for devkit setup-project"
+  requires-python = ">=3.14"
+  dependencies    = []
+
+[dependency-groups]
+  dev = ["aeth-devkit>=12.1.0"]
+
+[tool.devkit]
+  # The vsix is released by .github/workflows/release.yml on a `vN` tag push; devkit's
+  # wheel-publishing release workflow has nothing to build here and must not replace it.
+  release-workflow = false
+
+[tool.poe]
+  include_script = [{ script = "aeth_devkit:tasks", executor = { type = "uv", frozen = true } }]
+
+[tool.uv.sources]
+  aeth-devkit = [{ index = "SFTPyPI" }]
+
+[[tool.uv.index]]
+  name     = "SFTPyPI"
+  url      = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+simple"
+  explicit = true
