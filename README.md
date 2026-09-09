@@ -31,6 +31,8 @@ and publishes GitHub release `vN` with it:
 git tag -a v3 -m "VS Code extension build 3" && git push origin v3
 ```
 
-`devkit setup-project` installs the newest `N` that meets its `MIN_EXTENSION_VERSION`; bump
-that constant in devkit when a protocol change makes older builds unusable. Build 1 was
-released from `aeth-devkit` as `vscode-extension-v1`; numbering continues from there.
+`devkit setup-project` installs the newest published release (not tag) `N` that meets its
+`MIN_EXTENSION_VERSION` and carries the vsix; a draft or prerelease is ignored, and a tag whose
+run failed installs nothing until `gh run rerun <run-id>` succeeds. Bump that constant in
+devkit when a protocol change makes older builds unusable. Build 1 was released from
+`aeth-devkit` as `vscode-extension-v1`; numbering continues from there.
