@@ -4,15 +4,15 @@ requires-python = ">=3.14"
 
 [[package]]
 name = "aeth-devkit"
-version = "12.1.0"
+version = "13.0.0"
 source = { registry = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+simple" }
 dependencies = [
     { name = "poethepoet" },
 ]
-sdist = { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/16d/5cb61ba46909c/aeth_devkit-12.1.0.tar.gz", hash = "sha256:16d5cb61ba46909cf827ea8becbb2ff97d441c549245e0e03eab45a5ad139f57" }
+sdist = { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/a63/27c348cffb985/aeth_devkit-13.0.0.tar.gz", hash = "sha256:a6327c348cffb9852dc3ed3aa03c0b3c00f8f37ea9c720f438939cd222e0c0bc" }
 wheels = [
-    { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/699/44664b24e5b27/aeth_devkit-12.1.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:69944664b24e5b27bb7d46dd15b6ea7820d2478b9011a6b3e1ce5f493f5efff2" },
-    { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/dcc/e4ea72a166fd0/aeth_devkit-12.1.0-py3-none-win_amd64.whl", hash = "sha256:dcce4ea72a166fd066a13f05ab667eb00261140190bed1fbcdb1a176be5b8dc6" },
+    { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/4af/da8cd5a698e82/aeth_devkit-13.0.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4afda8cd5a698e82fa30269fba989fe8a6f7ed2d21512aa35e326877623d9d97" },
+    { url = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+f/a3d/20e1805843e40/aeth_devkit-13.0.0-py3-none-win_amd64.whl", hash = "sha256:a3d20e1805843e40e9cb735b33b9dde7fb571d964302cd1e7b2b45b541344c99" },
 ]
 
 [[package]]
@@ -114,7 +114,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "aeth-devkit", specifier = ">=12.1.0", index = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+simple" },
+    { name = "aeth-devkit", specifier = ">=13.0.0", index = "https://pypi.sweetfiretobacco.com/jacob.ogden/internal/+simple" },
     { name = "poethepoet", specifier = ">=0.46.0" },
     { name = "pyright", specifier = ">=1.1.411" },
     { name = "pytest", specifier = ">=8.0" },
@@ -193,15 +193,15 @@ wheels = [
 
 [[package]]
 name = "pyright"
-version = "1.1.411"
+version = "1.1.413"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "nodeenv" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7e/ab/265f7dc69d28113ebba19092e57b075f41543b2ed048429c5f56e2b88eac/pyright-1.1.411.tar.gz", hash = "sha256:d885a0551f2e763b089a02702174e7f4ba77548cddabc972ab86d1f7f1b0f998", size = 4112861, upload-time = "2026-06-25T02:14:06.37Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4a/eb/343ee766d0a6a9259366b07dba28543753a53ae76dc6d660e5f97df56411/pyright-1.1.413.tar.gz", hash = "sha256:40357dc6bd967e87a62877574ae79195d44e00d02917c8230e1d4b94ea88fccb", size = 4127365, upload-time = "2026-09-09T18:36:21.337Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0a/49/385be530a6a5b78d1cbcd5c2e38debc8959a2fc6bdb716f4e581002979fc/pyright-1.1.411-py3-none-any.whl", hash = "sha256:dc7c72a8e2700c55baa127554040e067041ea53ccfd50bf96308cc4291c7d5d9", size = 6181526, upload-time = "2026-06-25T02:14:04.691Z" },
+    { url = "https://files.pythonhosted.org/packages/a1/0a/dad5520e95b00ff65fba1d0b538e4fe0e5a5e33117829043bf8f523ecfb5/pyright-1.1.413-py3-none-any.whl", hash = "sha256:1d74426e431b49f803735632910cc3db7611f904693b7775224ae752f389cf4f", size = 6197123, upload-time = "2026-09-09T18:36:19.23Z" },
 ]
 
 [[package]]
