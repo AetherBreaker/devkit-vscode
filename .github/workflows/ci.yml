@@ -1,4 +1,4 @@
-name: CI
+name: "Verify: typecheck, tests, extension build"
 
 on:
   push:
@@ -15,7 +15,7 @@ permissions:
 jobs:
   # esbuild strips types without checking them, so `typecheck` is the only type check.
   extension:
-    name: VS Code extension
+    name: "Extension: npm ci, typecheck, test, build"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,10 +25,14 @@ jobs:
           node-version: lts/*
           cache: npm
 
-      - run: npm ci
+      - name: npm ci
+        run: npm ci
 
-      - run: npm run typecheck
+      - name: npm run typecheck
+        run: npm run typecheck
 
-      - run: npm test
+      - name: npm test
+        run: npm test
 
-      - run: npm run build
+      - name: npm run build
+        run: npm run build

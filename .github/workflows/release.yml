@@ -5,7 +5,8 @@
 # out of devkit's release workflow). The release is created with the workflow token, so the
 # `release: published` event it raises starts no other workflow. `devkit setup-project`
 # installs the newest `vN` whose N meets its minimum.
-name: Release
+name: Release the VS Code extension from a vN tag
+run-name: Release extension build ${{ github.ref_name }}
 
 on:
   push:
@@ -20,6 +21,7 @@ concurrency:
 
 jobs:
   release:
+    name: "Extension: typecheck, test, package the vsix, publish GitHub release vN"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -41,15 +43,19 @@ jobs:
           node-version: lts/*
           cache: npm
 
-      - run: npm ci
+      - name: npm ci
+        run: npm ci
 
-      - run: npm run typecheck
+      - name: npm run typecheck
+        run: npm run typecheck
 
-      - run: npm test
+      - name: npm test
+        run: npm test
 
-      - run: bash scripts/package.sh "${{ steps.version.outputs.n }}"
+      - name: scripts/package.sh N, the vsix
+        run: bash scripts/package.sh "${{ steps.version.outputs.n }}"
 
-      - name: Release
+      - name: gh release create vN with the vsix
         env:
           GH_TOKEN: ${{ github.token }}
           N: ${{ steps.version.outputs.n }}
